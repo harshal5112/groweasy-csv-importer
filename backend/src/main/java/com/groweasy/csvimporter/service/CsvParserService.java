@@ -35,7 +35,7 @@ public class CsvParserService {
                     .setIgnoreEmptyLines(true)
                     .setTrim(true)
                     .setAllowMissingColumnNames(true)
-                    .get();
+                    .build(); //ch1 
 
             try (CSVParser parser = format.parse(reader)) {
                 List<String> headers = parser.getHeaderNames();
